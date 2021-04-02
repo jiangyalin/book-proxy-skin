@@ -1,0 +1,15 @@
+/*提示框模板冲突修改*/
+.jconfirm-box-container .content{
+    min-height: 0;
+}
+
+/*表格等宽*/
+.u-table-fixed{
+    table-layout:fixed;
+}
+.u-table-fixed td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+

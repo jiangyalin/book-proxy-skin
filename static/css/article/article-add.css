@@ -1,0 +1,37 @@
+.form-group textarea{
+    resize: none;
+}
+.u-text{
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+    min-height: 350px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #dddddd;
+    resize: none;
+    outline: none;
+}
+
+/*富文本样式还原*/
+.ql-container h1,.ql-container h2,.ql-container h3,.ql-container h4,.ql-container h5,.ql-container h6{
+    line-height: 1;
+}
+.ql-container h1{
+    font-size: 26px;
+}
+.ql-container h2{
+    font-size: 19.5px;
+}
+.ql-container h3{
+    font-size: 15.21px;
+}
+.ql-container h4{
+    font-size: 13px;
+}
+.ql-container h5{
+    font-size: 12px;
+}
+.ql-container h6{
+    font-size: 12px;
+}

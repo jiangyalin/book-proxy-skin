@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-color: #f4f5f7;
+}
+input{
+    outline: none;
+    font-size: 17px;
+}
+::selection{
+    background-color: #367fa9;
+    color: #FFFFFF;
+}
+.main{
+    width: 100%;
+    height: auto;
+    min-width: 600px;
+}
+.header{
+    width: 100%;
+    height: 300px;
+    background-color: #3c8dbc;
+}
+.he_logo{
+    width: 424px;
+    height: 42px;
+    background-image: url(../img/login_logo.png);
+    margin: 0 auto;
+    position: relative;
+}
+.box{
+    width: 400px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+.box_ma{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #FFFFFF;
+}
+.title{
+    width: 100%;
+    height: 60px;
+    background-color: #367fa9;
+    padding: 0 25px;
+}
+.title_h{
+    line-height: 60px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.box_body{
+    width: 100%;
+    height: auto;
+    padding: 25px;
+}
+.form_group{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.form_group_p{
+    font-size: 12px;
+    position: absolute;
+    left: 5px;
+    top: -18px;
+    line-height: 12px;
+    color: #CB2027;
+}
+.group_ma{
+    width: 100%;
+    height: 44px;
+    border: 1px solid #367fa9;
+}
+.my_font{
+    width: 50px;
+    line-height: 42px;
+    font-size: 20px;
+    color: #367fa9;
+    text-align: center;
+    float: left;
+}
+.my_input{
+    height: 100%;
+    float: left;
+    width: 298px;
+    border: 0 solid #367fa9;
+    transition: 0.1s;
+    color: #367fa9;
+}
+.group_ma_to{
+    margin-bottom: 15px;
+}
+.group_ma_none{
+    overflow: auto;
+}
+.box_a{
+    float: right;
+    font-size: 14px;
+    color: #367fa9;
+    line-height: 44px;
+}
+.input_submit{
+    width: 100%;
+    height: 44px;
+    background-color: #367fa9;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+.input_submit:hover{
+    background-color: #307298;
+    cursor: pointer;
+}
