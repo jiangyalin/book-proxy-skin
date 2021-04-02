@@ -19,10 +19,6 @@ app.locals.blog = {
 
 app.use(bodyParser.json({ limit: '50mb' })) // 设置最大提交值
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
-app.use((req, res, next) => {
-  res.locals.user = req.session.user
-  next()
-})
 
 app.all('*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
