@@ -5,10 +5,12 @@ const path = require('chromedriver').path // 必要，不能删除
 let selenium = ''
 
 module.exports = {
-  get: () => {
+  create: (isHeadless = false) => {
     if (!selenium) {
-      selenium = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().detachDriver(true)).build()
-      // selenium = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless().detachDriver(true)).build()
+      // 正常浏览器
+      if (!isHeadless) selenium = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().detachDriver(true)).build()
+      // 无头浏览器
+      if (isHeadless) selenium = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless().detachDriver(true)).build()
     }
     return selenium
   },
