@@ -5,9 +5,17 @@
   <section class="content-header">
     <h1>这是首页</h1>
     <ol class="breadcrumb">
+      <% data.forEach(function (item) { %>
       <li>
-        <a href="/index"><i class="fa fa-dashboard"></i>首页</a>
+        <p><%= item.href%></p>
+        <p><%= item.cover%></p>
+        <p><%= item.page%>页</p>
+        <p><%= item.createTime%></p>
+        <p>作者：<%= item.author%></p>
+        <p><%= item.bookName%></p>
+        <p>是否修正<%= item.isNotFix%></p>
       </li>
+      <% }); %>
     </ol>
   </section>
   <section class="content">
