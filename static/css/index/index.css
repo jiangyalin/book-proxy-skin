@@ -1,0 +1,42 @@
+.g-home-box {
+    width: 100%;
+}
+
+.m-box .u-list {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.m-box .u-li {
+    padding: 10px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.m-box .u-cover {
+    width: 100%;
+}
+
+.m-box .u-p {
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.5;
+}
+
+.m-box .u-btn-gp {
+    display: flex;
+    justify-content: space-between;
+}
+.m-box .u-btn-gp .u-btn {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #409eff;
+    line-height: 24px;
+    background-color: #ecf5ff;
+    border: 1px solid #b3d8ff;
+    border-radius: 5px;
+    cursor: pointer;
+}
