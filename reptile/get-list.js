@@ -1,5 +1,7 @@
 const selenium = require('./selenium')
 const config = require('./../config/default')
+const Book = require('./../db/book')
+const List = require('./../db/list')
 const jsDom = require('jsdom').JSDOM
 const jquery = require('jquery')
 
@@ -19,24 +21,33 @@ const get = async (callback = () => {}) => {
   // console.log('html', html)
   const data = []
   const domBox = $('body ul.cc li.gallary_item')
+  const book = new Book()
+  const list = new List()
+  book.initData()
+  list.initData()
   for (let i = 0; i < domBox.length; i++) {
     const dom = domBox.eq(i)
     const infoColText = dom.find('.info_col').text()
     const title = dom.find('a').attr('title')
-    data.push({
+    const href = dom.find('a').attr('href')
+    book.addBook({
       title,
-      href: dom.find('a').attr('href'),
-      cover: dom.find('img').attr('src'),
-      page: Number(infoColText.substring(0, infoColText.indexOf('張')).trim()),
-      createTime: infoColText.substring(infoColText.indexOf('創建於') + 3).trim(),
-      author: title.substring(title.indexOf('[') + 1, title.indexOf(']')),
-      bookName: title.split('[').map(item => item.substring(item.indexOf(']') + 1)).filter(item => item).join('').trim(),
-      isNotFix: title.includes('[無修正]')
+      infoColText,
+      href,
+      cover: dom.find('img').attr('src')
+    })
+    list.addList({
+      bookId: book.newBookData.id,
+      uploadTime: book.newBookData.uploadTime
     })
   }
   // console.log('data', data)
-  callback(data)
+  callback(list.getAll())
   // return data
 }
+
+// get(data => {
+//   console.log('data', data)
+// })
 
 module.exports = get
