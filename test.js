@@ -1,15 +1,20 @@
-// const Book = require('./reptile/class-book')
-// const Favorites = require('./db/favorites')
+const tool = require('./tool')
+// const selenium = require('./reptile/selenium')
+//
+// const get = async (callback = () => {}) => {
+//   const chrome = selenium.create(false)
+//
+//   await chrome.get('http://www.baidu.com')
+//
+// }
+//
+// get(data => {
+//   console.log('data', data)
+// })
 
-// console.log('tt', text.split('[').map(item => item.substring(item.indexOf(']') + 1)).filter(item => item))
+console.log('unicode', tool.unicode.encodeUnicode('测试'))
+console.log('a', tool.unicode.decodeUnicode('%E5%A6%82%E6%9C%88%E7%BE%A4%E7%9C%9F'))
+console.log('d', tool.utf8.encodeUtf8('测试'))
+console.log('t', tool.utf8.decodeUtf8('%E5%A6%82%E6%9C%88%E7%BE%A4%E7%9C%9F'))
 
-// console.log('book', new Book())
-
-// const favorites = new Favorites()
-// console.log('favorites', favorites.addFavorites())
-
-const aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-aaa.splice(2, 0, 'ppp')
-
-console.log('aaa', aaa)
+// module.exports = get

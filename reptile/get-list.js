@@ -1,14 +1,15 @@
 const selenium = require('./selenium')
 const config = require('./../config/default')
+const tool = require('./../tool')
 const Book = require('./../db/book')
 const List = require('./../db/list')
 const jsDom = require('jsdom').JSDOM
 const jquery = require('jquery')
 
-const get = async (callback = () => {}) => {
+const get = async ({ search = '', currentPage = 1 }, callback = () => {}) => {
   const chrome = selenium.create(true)
 
-  await chrome.get(config.page.list)
+  await chrome.get(config.page.list + '/?ctl=albums&page=' + currentPage + '&sname=' + tool.utf8.encodeUtf8(search))
   // await chrome.get('http://www.baidu.com')
 
   const html = await chrome.getPageSource()

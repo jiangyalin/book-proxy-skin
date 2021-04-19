@@ -4,28 +4,8 @@
 <div class="g-home-box">
   <h1>这是首页</h1>
   <section class="m-box">
-    <ul class="u-list">
-      <% data.forEach(function (item) { %>
-      <li class="u-li">
-        <img class="u-cover" src="<%= item.cover%>">
-        <p class="u-p u-name"><%= item.bookName%></p>
-        <p class="u-p u-author">作者：<%= item.author%></p>
-        <p class="u-p u-time"><%= item.createTime%></p>
-        <div class="u-btn-gp">
-          <button class="u-btn" type="button">下载</button>
-          <button class="u-btn" type="button">收藏</button>
-        </div>
-<!--        <p><%= item.page%>页</p>-->
-<!--        <p><%= item.createTime%></p>-->
-<!--        <p>作者：<%= item.author%></p>-->
-<!--        <p><%= item.bookName%></p>-->
-<!--        <p>是否修正<%= item.isNotFix%></p>-->
-      </li>
-      <% }); %>
-    </ul>
+    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=1">列表</a>
   </section>
-<!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
-<!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
 </div>
 
 <script src="/js/index/index.js"></script>
