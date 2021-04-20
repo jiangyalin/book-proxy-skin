@@ -26,10 +26,10 @@
   </section>
   <div class="m-page">
     <% if (page.currentPage > 1) { %>
-    <a class="u-btn" href="/list?type='NOT_IMG'&currentPage=<%= page.currentPage - 1 %>">上一页</a>
+    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= page.currentPage - 1 %>">上一页</a>
     <% } %>
     <p class="u-tips">第<%= page.currentPage %>页</p>
-    <a class="u-btn" href="/list?type='NOT_IMG'&currentPage=<%= page.currentPage + 1 %>">下一页</a>
+    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= page.currentPage + 1 %>">下一页</a>
   </div>
   <!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
   <!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->

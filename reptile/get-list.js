@@ -19,7 +19,6 @@ const get = async ({ search = '', currentPage = 1 }, callback = () => {}) => {
 
   await chrome.quit()
 
-  // console.log('html', html)
   const data = []
   const domBox = $('body ul.cc li.gallary_item')
   const book = new Book()
@@ -42,9 +41,7 @@ const get = async ({ search = '', currentPage = 1 }, callback = () => {}) => {
       uploadTime: book.newBookData.uploadTime
     })
   }
-  // console.log('data', data)
   callback(list.getAll())
-  // return data
 }
 
 // get(data => {
