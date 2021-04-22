@@ -21,4 +21,4 @@ const BookSchema = new Schema({
   isFavorites: { type: Boolean, default: false }, // 是否收藏
 })
 
-module.exports = mongoose.model('book', BookSchema)
+module.exports = mongoose.model('book2', BookSchema)

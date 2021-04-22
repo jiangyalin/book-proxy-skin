@@ -5,14 +5,14 @@
   <h1>这是列表</h1>
   <section class="m-box">
     <ul class="u-list">
-      <% data.forEach(function (item) { %>
+      <% rows.forEach(function (item) { %>
       <li class="u-li">
         <img class="u-cover" src="<%= item.cover%>">
         <p class="u-p u-name"><%= item.bookName%></p>
         <p class="u-p u-author">作者：<%= item.author%></p>
         <p class="u-p u-time"><%= item.createTime%></p>
         <div class="u-btn-gp">
-          <button class="u-btn" type="button">下载</button>
+          <a class="u-btn" type="button" href="<%= item.downSrc %>" target="_blank">下载</a>
           <button class="u-btn" type="button">收藏</button>
         </div>
         <!--<p><%= item.page%>页</p>-->
@@ -25,11 +25,11 @@
     </ul>
   </section>
   <div class="m-page">
-    <% if (page.currentPage > 1) { %>
-    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= page.currentPage - 1 %>">上一页</a>
+    <% if (currentPage > 1) { %>
+    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= currentPage - 1 %>">上一页</a>
     <% } %>
-    <p class="u-tips">第<%= page.currentPage %>页</p>
-    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= page.currentPage + 1 %>">下一页</a>
+    <p class="u-tips">第<%= currentPage %>页</p>
+    <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= currentPage + 1 %>">下一页</a>
   </div>
   <!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
   <!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
