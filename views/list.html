@@ -12,7 +12,7 @@
         <p class="u-p u-author">作者：<%= item.author%></p>
         <p class="u-p u-time"><%= item.createTime%></p>
         <div class="u-btn-gp">
-          <a class="u-btn" type="button" href="<%= item.downSrc %>" target="_blank">下载</a>
+          <a class="u-btn j-down" type="button" data-href="<%= item.downSrc %>?n=<%= item.bookName %>" target="_blank">下载</a>
           <button class="u-btn" type="button">收藏</button>
         </div>
         <!--<p><%= item.page%>页</p>-->
