@@ -8,7 +8,6 @@ const down = function (url) {
   elemIF.style.display = 'none'
   document.body.appendChild(elemIF)
 }
-console.log('s', document.querySelector('.j-down'))
 
 $('.j-down').click(function () {
   down($(this).attr('data-href'))
