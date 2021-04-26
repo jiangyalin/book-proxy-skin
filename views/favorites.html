@@ -8,7 +8,7 @@
       <% rows.forEach(function (item) { %>
       <li class="u-li">
         <p><%= item.originalId %></p>
-        <img class="u-cover" src="<%= item.cover %>">
+        <img class="u-cover j-book" src="<%= item.cover %>" data-id="<%= item.originalId %>">
         <p class="u-p u-name"><%= item.bookName %></p>
         <p class="u-p u-author">作者：<%= item.author %></p>
         <p class="u-p u-time"><%= item.createTime %></p>
