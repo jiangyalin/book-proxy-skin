@@ -19,7 +19,7 @@ const getList = async page => {
   const populate = ''
   const criteria = { isCacheInfo: false, $or: [{ title: qs }, { name: qs }] } // 查询条件
   let fields = { description: 1, date: -1, originalId: 1, downSrc: 1 } // 待返回的字段
-  const options = { sort: [{ date: -1 }] } // 排序
+  const options = { originalId: -1 } // 排序
   return pageList.pageQuery(page, pageSize, Model, populate, criteria, fields, options)
 }
 

@@ -8,9 +8,7 @@ const pageQuery = async (page, pageSize, Model, populate, queryParams, fields, s
   const count = await Model.count(queryParams, (err, count) => {
     // done(err, count)
   })
-  const records = await Model.find(queryParams, fields, sortParams, (err, doc) => {
-    // done(err, doc)
-  }).skip(start).limit(pageSize).populate(populate)
+  const records = await Model.find(queryParams).skip(start).limit(pageSize).populate(populate).sort(sortParams).select(fields)
   $page.pageCount = (count - 1) / pageSize + 1
   $page.results = records.map(item => {
     return {
