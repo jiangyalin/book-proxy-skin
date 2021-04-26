@@ -1,7 +1,7 @@
 .m-box {
   display: flex;
-  flex-wrap: wrap; }
-  .m-box .u-btn {
+  flex-wrap: wrap;
+  .u-btn {
     margin: 10px;
     width: 200px;
     height: 200px;
@@ -10,4 +10,6 @@
     line-height: 200px;
     text-align: center;
     border: 1px solid #0d6aad;
-    border-radius: 10px; }
+    border-radius: 10px;
+  }
+}

@@ -2,6 +2,7 @@ const bodyParser = require('body-parser')
 const Book = new require('./../models/book')
 const pageList = require('./../models/page-list')
 const tool = require('./../tool')
+const moment = require('moment')
 // const getList = require('./../reptile/get-list')
 
 module.exports = app => {
@@ -32,9 +33,11 @@ module.exports = app => {
       currentPage: page,
       rows: $page.results.map(item => ({
         ...item,
+        cover: 'http://124.70.153.221:9998/ftppic/2021/20210305100759585.jpg',
         title: item.title.substring(0, 2) + '这是测试标题',
         bookName: item.bookName.substring(0, 2) + '这是测试书名',
-        downSrc: item.downSrc
+        downSrc: item.downSrc,
+        createTime: moment(item.createTime).format('YYYY-MM-DD HH:mm:ss')
       }))
     }
 
