@@ -20,11 +20,6 @@
           <button class="u-btn j-favorites" data-id="<%= item._id %>" type="button">收藏</button>
           <% } %>
         </div>
-        <!--<p><%= item.page%>页</p>-->
-        <!--<p><%= item.createTime%></p>-->
-        <!--<p>作者：<%= item.author%></p>-->
-        <!--<p><%= item.bookName%></p>-->
-        <!--<p>是否修正<%= item.isNotFix%></p>-->
       </li>
       <% }); %>
     </ul>
@@ -36,8 +31,6 @@
     <p class="u-tips">第<%= currentPage %>页</p>
     <a class="u-btn" href="/list?type=NOT_IMG&currentPage=<%= currentPage + 1 %>">下一页</a>
   </div>
-  <!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
-  <!--  <img style="width: 20px;height: 20px" src="https://t1.wnacg.org/data/t/0450/69/15119650082697.jpg">-->
 </div>
 
 <script src="/js/index/list.js"></script>

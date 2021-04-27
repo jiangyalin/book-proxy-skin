@@ -1,0 +1,21 @@
+.m-box {
+  .u-list {
+    display: flex;
+    flex-wrap: wrap;
+    .u-li {
+      display: flex;
+      margin: 10px;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+      font-size: 16px;
+      color: #4a4a4a;
+      text-align: center;
+      flex-direction: column;
+      justify-content: space-around;
+      border: 1px solid #0d6aad;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+  }
+}
