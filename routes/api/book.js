@@ -10,7 +10,7 @@ router.get('/list', async (req, res) => {
   // 查询数据
   const page = Number(req.query.currentPage) || 1 // 当前页码
   const pageSize = Number(12) // 每页条数
-  const qs = new RegExp('') // 标题正则参数
+  const qs = new RegExp(req.query.search) // 标题正则参数
   const Model = Book // 模板
   const populate = '' // 外键
   const criteria = { $or: [{ title: qs }, { name: qs }] } // 查询条件

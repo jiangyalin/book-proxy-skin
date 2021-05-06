@@ -28,12 +28,30 @@ $('.j-list').on('click', '.j-book', function () {
   // window.location.href = 'https://www.wnacg.org/photos-index-aid-' + $(this).attr('data-id') + '.html'
 })
 
+const getRequest = key => {
+  const url = decodeURI(location.search)
+  const theRequest = {}
+  if (url.indexOf('?') !== -1) {
+    const str = url.substring(url.indexOf('?') + 1, url.length)
+    const str2 = str.split('&')
+    for (let i = 0; i < str2.length; i++) {
+      if (str2[i]) theRequest[str2[i].split('=')[0]] = unescape(str2[i].split('=')[1])
+    }
+    if (!key) {
+      return theRequest
+    } else {
+      return theRequest[key]
+    }
+  }
+}
+
 const toPage = function (page) {
   $.get({
     url: '/api/book/list',
     data: {
       type: 'NOT_IMG',
-      currentPage: page
+      currentPage: page,
+      search: getRequest('search')
     }
   }, res => {
     let listDom = ''
