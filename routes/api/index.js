@@ -10,7 +10,7 @@ router.use('/down', require('./down'))
 // 书
 router.use('/book', require('./book'))
 
-// 书
+// 关注
 router.use('/shut-down', require('./shut-down'))
 
 module.exports = router

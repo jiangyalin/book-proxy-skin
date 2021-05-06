@@ -19,6 +19,8 @@ const BookSchema = new Schema({
   isNotFix: { type: Boolean, default: false }, // 是否无修正
   isCacheInfo: { type: Boolean, default: false }, // 是否已缓存详情页
   isFavorites: { type: Boolean, default: false }, // 是否收藏
+  tagNames: { type: String, default: null }, // 标签名
+  tagIds: { type: String, default: null } // 标签id
 })
 
 module.exports = mongoose.model('book', BookSchema)

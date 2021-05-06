@@ -9,7 +9,7 @@ router.get('/list', async (req, res) => {
   const type = req.query.type || 'NOT_IMG' // (NOT_IMG,SHOW_IMG)
   // 查询数据
   const page = Number(req.query.currentPage) || 1 // 当前页码
-  const pageSize = Number(12) // 每页条数
+  const pageSize = Number(req.query.pageSize) // 每页条数
   const qs = new RegExp(req.query.search) // 标题正则参数
   const Model = Book // 模板
   const populate = '' // 外键
@@ -23,12 +23,13 @@ router.get('/list', async (req, res) => {
     rows: $page.results.map(item => ({
       ...item,
       cover: 'http://124.70.153.221:9998/ftppic/2021/20210305100759585.jpg',
-      title: item.title.substring(0, 2) + '这是测试标题',
-      bookName: item.bookName.substring(0, 2) + '这是测试书名',
+      title: item.title.substring(0, 1) + '这是测试标题',
+      bookName: item.bookName.substring(0, 1) + '这是测试书名',
       downSrc: item.downSrc,
       createTime: moment(item.createTime).format('YYYY-MM-DD HH:mm:ss'),
       isFavorites: item.isFavorites,
-      originalId: item.originalId
+      originalId: item.originalId,
+      tagNames: item.tagNames || ''
     }))
   }
   res.jsonp({
