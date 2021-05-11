@@ -13,4 +13,7 @@ router.use('/book', require('./book'))
 // 关注
 router.use('/shut-down', require('./shut-down'))
 
+// 标签
+router.use('/tag', require('./tag'))
+
 module.exports = router

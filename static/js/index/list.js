@@ -33,6 +33,28 @@ $('.j-tag-list').on('click', '.j-tag-li', function () {
   $(this).attr('data-active', true)
 })
 
+$('.j-tag-btn-submit').click(function () {
+  if ($('.j-tag-li[data-active="true"]').attr('data-id')) {
+
+  } else {
+    if ($('.j-tag-it').val()) addTag($('.j-tag-it').val())
+  }
+  $('.j-alert').attr('data-active', false)
+})
+
+$('.j-add-tag').click(function () {
+  console.log('ddd')
+  openAlert()
+})
+
+const openAlert = () => {
+  $('.j-alert').attr('data-active', true)
+}
+
+$('.j-tag-btn-cancel').click(function () {
+  $('.j-alert').attr('data-active', false)
+})
+
 const getRequest = key => {
   const url = decodeURI(location.search)
   const theRequest = {}
@@ -48,6 +70,17 @@ const getRequest = key => {
       return theRequest[key]
     }
   }
+}
+
+const addTag  = text => {
+  $.post({
+    url: '/api/tag',
+    data: {
+      name: text
+    }
+  }, res => {
+
+  })
 }
 
 const toPage = function (page) {

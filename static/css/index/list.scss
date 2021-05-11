@@ -79,6 +79,7 @@
 
 // 弹窗
 .m-alert {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -87,6 +88,9 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .8);
+  &[data-active='true'] {
+    display: block;
+  }
   .u-mn {
     margin: 0 auto;
     margin-top: 10%;
@@ -95,11 +99,18 @@
     .u-tag-list {
       padding-top: 10px;
       .u-tag-li {
+        display: flex;
         padding: 0 10px;
         font-size: 14px;
         line-height: 36px;
+        white-space: nowrap;
+        justify-content: space-around;
         &[data-active='true'] {
           background-color: rgba(0, 167, 208, .5);
+        }
+        .u-it {
+          flex: 1;
+          height: 26px;
         }
       }
     }

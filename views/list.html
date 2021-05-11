@@ -3,7 +3,7 @@
 
 <div class="g-home-box">
   <h1>这是列表</h1>
-  <i class="m-add-tag">添加标签</i>
+  <i class="m-add-tag j-add-tag">添加标签</i>
   <section class="m-box">
     <ul class="u-list j-list">
     </ul>
@@ -16,15 +16,19 @@
   </div>
 </div>
 
-<div class="m-alert">
+<div class="m-alert j-alert" data-active="false">
   <div class="u-mn">
     <ul class="u-tag-list j-tag-list">
       <li class="u-tag-li j-tag-li">测试</li>
       <li class="u-tag-li j-tag-li">测试</li>
+      <li class="u-tag-li j-tag-li">
+        <span>新增</span>
+        <input class="u-it j-tag-it" type="text">
+      </li>
     </ul>
     <div class="u-btn-gp">
-      <button class="u-btn" type="button">确定</button>
-      <button class="u-btn" type="button">取消</button>
+      <button class="u-btn j-tag-btn-submit" type="button">确定</button>
+      <button class="u-btn j-tag-btn-cancel" type="button">取消</button>
     </div>
   </div>
 </div>
